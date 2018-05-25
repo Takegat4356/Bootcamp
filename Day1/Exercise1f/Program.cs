@@ -13,11 +13,11 @@ namespace Exercise1f
             status[2] = 3;
             status[3] = 4;
 
-            //for (int i = 0; i < status.Length; i++) //status [0] = 1 for Alive
-            //for (int i = 1; i < status.Length; i++) //status [1] = 2 for Zombie
-            //for (int i = 2; i < status.Length; i++) //status [2] = 2 for Dead
-            //for (int i = 3; i < status.Length; i++) //status [3] = 2 for Unknown
-            int i = 2
+            //int i = 0; //status [0] = 1 for Alive
+            //int i = 1; //status [1] = 2 for Zombie
+            //int i = 2; //status [2] = 3 for Dead
+            int i = 3; //status [3] = 4 for Unknown
+
             while (i < status.Length)
             {
                 if (status[i] == 1)

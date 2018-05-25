@@ -15,8 +15,8 @@ namespace Exercise1e
 
             //for (int i = 0; i < status.Length; i++) //status [0] = 1 for Alive
             //for (int i = 1; i < status.Length; i++) //status [1] = 2 for Zombie
-            for (int i = 2; i < status.Length; i++) //status [2] = 2 for Dead
-            //for (int i = 3; i < status.Length; i++) //status [3] = 2 for Unknown
+            for (int i = 2; i < status.Length; i++) //status [2] = 3 for Dead
+            //for (int i = 3; i < status.Length; i++) //status [3] = 4 for Unknown
             {
                 if (status[i] == 1)
                 {
