@@ -42,7 +42,6 @@ namespace Exercise1f
                 }
                  i++;
             }
-
             Console.ReadKey();  
         }
     }
