@@ -5,7 +5,7 @@ namespace Exercise1d
     class Program
     {
         static void Main(string[] args)
-        {
+        { 
             
             int[] status = new int[5];
 
