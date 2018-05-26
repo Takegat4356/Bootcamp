@@ -23,20 +23,21 @@ namespace Zombie.Simulator2
             //you create the variable within the method, it stays only within the method
         }        
     }
-    public class Person //this can also be in another file
+    public class abstract Person //this can also be in another file
         {
                 public int DistanceTraveled  {get; set;}
                 public Person()
                 {
                     Console.Write ("A new person has been created. ");
                 }
-                public void Walk(int minutes)
+                public virtual void Walk(int minutes)
                 {
                     //use void, when we are not running anything
                     int distance = CalculateDistance(minutes);
                     DistanceTraveled = DistanceTraveled + minutes * 2;
                     //just a random calculation
                     //local variable in this method
+                    //we'll just use int for now instead of decimal
                 }
 
                 private int CalculateDistance(int minutes)
@@ -45,4 +46,16 @@ namespace Zombie.Simulator2
                     return minutes *2;
                 }
         }  
+
+        public sealed class Human: Person
+        {
+             // Person fields, properties, methods and events are inherited
+             // New Human fields, properties, methods and events go here...
+        }
+
+         public sealed class Zombie: Person
+        {
+             // Person fields, properties, methods and events are inherited
+             // New Zombie fields, properties, methods and events go here...
+        }
 }
