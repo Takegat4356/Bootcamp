@@ -22,11 +22,14 @@ namespace Zombie.Simulator2
             //local variables because they are inside of a method.
             //you create the variable within the method, it stays only within the method
 
-            Person Zombie = new Person ();
-            Console.Writeline (Zombie.DistanceTraveled);
+            Zombie Zombie = new Zombie ();
+            Zombie.Walk(100);
+            Console.WriteLine (Zombie.DistanceTraveled);
 
-            Person Human = new Person ();
-            Console.Writeline (Zombie.DistanceTraveled);
+            Human human = new Human ();
+            human.Run(50);
+            human.Walk(50);
+            Console.WriteLine (human.DistanceTraveled);
 
         }        
     }
@@ -37,6 +40,7 @@ namespace Zombie.Simulator2
                 {
                     Console.Write ("A new person has been created. ");
                 }
+
                 public virtual void Walk(int minutes)
                 {
                     //use void, when we are not running anything
@@ -48,7 +52,7 @@ namespace Zombie.Simulator2
                     //we'll just use int for now instead of decimal
                 }
 
-                private int CalculateDistance(int minutes)
+                public int CalculateDistance(int minutes)
                 {
                     //the details you want to hide, make private
                     return minutes *2;
@@ -60,7 +64,7 @@ namespace Zombie.Simulator2
              // Person fields, properties, methods and events are inherited
              // New Human fields, properties, methods and events go here...
         
-                public virtual void Run(int minutes)
+                public void Run(int minutes)
                 {
                     //use void, when we are not running anything
                     //virtual - can be overidden
@@ -69,8 +73,7 @@ namespace Zombie.Simulator2
                     //just a random calculation
                     //local variable in this method
                     //we'll just use int for now instead of decimal
-                }
-        
+                }        
         }
 
          public sealed class Zombie: Person
@@ -83,14 +86,10 @@ namespace Zombie.Simulator2
                     //use void, when we are not running anything
                     //virtual - can be overidden
                     int distance = CalculateDistance(minutes);
-                    DistanceTraveled = DistanceTraveled + minutes * 0.5;
+                    DistanceTraveled = DistanceTraveled + minutes * 1;
                     //just a random calculation
                     //local variable in this method
                     //we'll just use int for now instead of decimal
-                }
-
-
-
-        
+                }        
         }
 }
