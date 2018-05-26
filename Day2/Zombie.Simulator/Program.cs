@@ -18,6 +18,9 @@ namespace Zombie.Simulator
             person2.Walk(10);
             Console.WriteLine (person2.DistanceTraveled);
             Console.WriteLine (person1.DistanceTraveled);
+
+            //local variables because they are inside of a method.
+            //you create the variable within the method, it stays only within the method
         }        
     }
     public class Person //this can also be in another file
