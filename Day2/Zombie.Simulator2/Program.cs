@@ -21,9 +21,17 @@ namespace Zombie.Simulator2
 
             //local variables because they are inside of a method.
             //you create the variable within the method, it stays only within the method
+
+            Person Zombie = new Person ();
+            Console.Writeline (Zombie.??);
+
+            Person Human = new Person ();
+            Console.Writeline (Zombie.??);
+
+
         }        
     }
-    public class abstract Person //this can also be in another file
+    public abstract class Person //this can also be in another file
         {
                 public int DistanceTraveled  {get; set;}
                 public Person()
@@ -33,6 +41,7 @@ namespace Zombie.Simulator2
                 public virtual void Walk(int minutes)
                 {
                     //use void, when we are not running anything
+                    //virtual - can be overidden
                     int distance = CalculateDistance(minutes);
                     DistanceTraveled = DistanceTraveled + minutes * 2;
                     //just a random calculation
@@ -51,11 +60,38 @@ namespace Zombie.Simulator2
         {
              // Person fields, properties, methods and events are inherited
              // New Human fields, properties, methods and events go here...
+        
+                public virtual void Run(int minutes)
+                {
+                    //use void, when we are not running anything
+                    //virtual - can be overidden
+                    int distance = CalculateDistance(minutes);
+                    DistanceTraveled = DistanceTraveled + minutes * 8;
+                    //just a random calculation
+                    //local variable in this method
+                    //we'll just use int for now instead of decimal
+                }
+        
         }
 
          public sealed class Zombie: Person
         {
              // Person fields, properties, methods and events are inherited
              // New Zombie fields, properties, methods and events go here...
+        
+                public override void Walk(int minutes)
+                {
+                    //use void, when we are not running anything
+                    //virtual - can be overidden
+                    int distance = CalculateDistance(minutes);
+                    DistanceTraveled = DistanceTraveled + minutes * 0.5;
+                    //just a random calculation
+                    //local variable in this method
+                    //we'll just use int for now instead of decimal
+                }
+
+
+
+        
         }
 }
