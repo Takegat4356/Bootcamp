@@ -7,27 +7,26 @@ namespace Zombie.Simulator2
         static void Main(string[] args)
         {
             //Class was on Saturday 5/26/2018
-            Person Mary = new Person(); // 1st in class Exercise new instance of the Person class
-            Person person1 = new Person();// 2nd in class Exercise new instance of the Person class
-            person1.DistanceTraveled = 5;
-            Console.WriteLine(person1.DistanceTraveled);
-            person1.Walk(10);
-            Console.WriteLine (person1.DistanceTraveled);
+            //Person Mary = new Person(); // 1st in class Exercise new instance of the Person class
+            //Person person1 = new Person();// 2nd in class Exercise new instance of the Person class
+            //person1.DistanceTraveled = 5;
+            //Console.WriteLine(person1.DistanceTraveled);
+            //person1.Walk(10);
+            //Console.WriteLine (person1.DistanceTraveled);
 
-            Person person2 = new Person();
-            person2.Walk(10);
-            Console.WriteLine (person2.DistanceTraveled);
-            Console.WriteLine (person1.DistanceTraveled);
+            //Person person2 = new Person();
+            //person2.Walk(10);
+            //Console.WriteLine (person2.DistanceTraveled);
+            //Console.WriteLine (person1.DistanceTraveled);
 
             //local variables because they are inside of a method.
             //you create the variable within the method, it stays only within the method
 
             Person Zombie = new Person ();
-            Console.Writeline (Zombie.??);
+            Console.Writeline (Zombie.DistanceTraveled);
 
             Person Human = new Person ();
-            Console.Writeline (Zombie.??);
-
+            Console.Writeline (Zombie.DistanceTraveled);
 
         }        
     }
