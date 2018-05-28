@@ -6,35 +6,34 @@ namespace Exercise1h
     {
         static void Main(string[] args)
         {
-             int[] status = new int[]{3, 4, 1, 4, 2, 3, 4};            
+            int[] status = new int[]{3, 4, 1, 4, 2, 3, 4};            
 
             //status = 1 for Alive
             //status = 2 for Zombie
             //status = 3 for Dead
             //status = 4 for Unknown
-            //4,2,4,2,1,4,2
-            int counter = 0;
-            
-            foreach (int i in status)
-            
-                if (status[counter] == 1)
+                   
+                        
+             for (int i = 0; i < status.Length; i++)
+            {
+                if (status[i] == 1)
                 {
                     Console.WriteLine("Alive");                    
                 }
-                else if (status[counter] == 2)
+                else if (status[i] == 2)
                 {
                     Console.WriteLine("Zombie");                  
                 }
-                else if (status[counter] == 3)
+                else if (status[i] == 3)
                 {
                     Console.WriteLine("Dead");
                 }
-                else if (status[counter] == 4)
+                else if (status[i] == 4)
                 {
                     Console.WriteLine("Unknown");                    
-                }           
-                counter++;     
+                } 
             }
+            Console.ReadKey();
         }
     }
 }
