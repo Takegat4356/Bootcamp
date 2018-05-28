@@ -21,7 +21,7 @@ namespace Exercise1e
                 if (status[i] == 1)
                 {
                     Console.WriteLine("Alive");
-                    break;
+                    break;                    
                 }
                 else if (status[i] == 2)
                 {
