@@ -1,44 +1,45 @@
 ﻿using System;
 
-namespace Exercise1f
+namespace Exercise1j
 {
     class Program
     {
         static void Main(string[] args)
         {
-            int[] status = new int[4];
+            int[] status = new int[]{3, 4, 1, 4, 2, 3, 4};            
 
-            status[0] = 1;
-            status[1] = 2;
-            status[2] = 3;
-            status[3] = 4;
+            //status = 1 for Alive
+            //status = 2 for Zombie
+            //status = 3 for Dead
+            //status = 4 for Unknown
+            int i = 0;
 
-            int i = 0; //status [0] = 1 for Alive
-            //int i = 1; //status [1] = 2 for Zombie
-            //int i = 2; //status [2] = 3 for Dead
-            //int i = 3; //status [3] = 4 for Unknown
-
-            while (i < status.Length)
+ do
             {
                 if (status[i] == 1)
                 {
                     Console.WriteLine("Alive");
+                    //break; Use breaks only in case statements
                 }
                 else if (status[i] == 2)
                 {
                     Console.WriteLine("Zombie");
+                     //break; Use breaks only in case statements
                 }
                 else if (status[i] == 3)
                 {
                     Console.WriteLine("Dead");
+                     //break; Use breaks only in case statements
                 }
                 else if (status[i] == 4)
                 {
                     Console.WriteLine("Unknown");
+                     //break; Use breaks only in case statements
                 }
                  i++;
-            }
-            Console.ReadKey();  
+            } while (i < status.Length);
+
+            Console.ReadKey();
         }
     }
 }
