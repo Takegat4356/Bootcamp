@@ -1,3 +1,5 @@
+namespace Zombie.Simulator3
+{
 public abstract class Person //this can also be in another file
         {
                 public int DistanceTraveled  {get; set;}
@@ -23,3 +25,4 @@ public abstract class Person //this can also be in another file
                     return minutes *2;
                 }
         }  
+}

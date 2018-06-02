@@ -2,6 +2,8 @@ namespace Zombie.Simulator3
 {
 public sealed class Human: Person
         {
+            public  decimal DistanceTraveled{get; set;}
+            
              // Person fields, properties, methods and events are inherited
              // New Human fields, properties, methods and events go here...
         
