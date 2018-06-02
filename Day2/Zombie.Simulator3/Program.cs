@@ -1,4 +1,5 @@
 ﻿using System;
+using.System.Collection.Generic;
 
 namespace Zombie.Simulator3
 {
@@ -22,6 +23,17 @@ namespace Zombie.Simulator3
             //local variables because they are inside of a method.
             //you create the variable within the method, it stays only within the method
 
+            List <IPerson> people = new List<IPerson>();
+            people.Add(new Human());
+            people.Add(new Zombie());
+            people.Add(new Human());
+
+            foreach (IPerson person in people)
+            {
+                 person.Walk(5);
+                 Console.WriteLine(person.DistanceTraveled);                
+            }
+
             Zombie Zombie = new Zombie ();
             Zombie.Walk(100);
             Console.WriteLine (Zombie.DistanceTraveled);
@@ -30,7 +42,6 @@ namespace Zombie.Simulator3
             human.Run(50);
             human.Walk(50);
             Console.WriteLine (human.DistanceTraveled);
-
         }        
     }
  
