@@ -1,12 +1,11 @@
 namespace Zombie.Simulator3
 {
 
-public interface IPerson
-{
-    decimal DistranceTraveled {get;set;}
+        public interface IPerson
+        {
+            decimal DistranceTraveled {get;set;}
 
-    void Walk (decimal minutes);
-}
-
+            void Walk (decimal minutes);
+        }
 
 }

@@ -1,10 +1,11 @@
 ﻿using System;
+using.System.Collection;
 using.System.Collection.Generic;
 
 namespace Zombie.Simulator3
 {
     class Program
-   {        
+    {        
         static void Main(string[] args)
         {
             //Class was on Saturday 5/26/2018
@@ -44,5 +45,4 @@ namespace Zombie.Simulator3
             Console.WriteLine (human.DistanceTraveled);
         }        
     }
- 
 }
