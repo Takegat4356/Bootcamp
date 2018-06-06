@@ -1,3 +1,5 @@
+using System;
+
 namespace Zombie.Simulator3
 {
 public abstract class Person //this can also be in another file

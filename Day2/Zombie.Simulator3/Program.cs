@@ -1,6 +1,5 @@
 ﻿using System;
-using.System.Collection;
-using.System.Collection.Generic;
+using System.Collections.Generic;
 
 namespace Zombie.Simulator3
 {

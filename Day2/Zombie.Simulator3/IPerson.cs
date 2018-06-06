@@ -3,9 +3,10 @@ namespace Zombie.Simulator3
 
         public interface IPerson
         {
-            decimal DistranceTraveled {get;set;}
+            decimal DistanceTraveled {get;set;}
 
             void Walk (decimal minutes);
+
         }
 
 }
