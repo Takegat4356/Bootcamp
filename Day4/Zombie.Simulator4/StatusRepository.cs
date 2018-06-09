@@ -11,7 +11,7 @@ public class StatusRepository: Repository
         //create a method
         public List<Status> GetAll()
         {
-            using (IDBConnection dbConnection = Connection)
+            using (IDbConnection dbConnection = Connection)
             {
                 dbConnection.Open();
 
