@@ -1,4 +1,8 @@
-﻿namespace Zombie.Simulator4
+﻿
+using System;
+using System.Collections.Generic;
+
+namespace Zombie.Simulator4
 {
     class Program
     {
