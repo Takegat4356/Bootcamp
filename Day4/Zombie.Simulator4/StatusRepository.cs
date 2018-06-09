@@ -11,7 +11,7 @@ public class StatusRepository: Repository
             {
                 dbConnection.Open();
 
-                string sql = 'select p.FirstName,p.LastName. ps.StatusDescription from person person inner join personstatus pson p.personstatusid = ps.personstatusid';
+                string sql = 'SELECT t1.PersonStatusID, t1.FirstName, t1.LastName FROM persondatabase.person t1 LEFT JOIN persondatabase.personstatus t2 ON t1.PersonStatusID = t2.PersonStatusID';
                 return dbConnection.Query<status>(sql,commandType: commandText).ToList();
             }
         }
