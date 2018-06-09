@@ -1,48 +1,39 @@
-﻿using System;
-using System.Collections.Generic;
-
-namespace Zombie.Simulator4
+﻿namespace Zombie.Simulator4
 {
     class Program
-    {        
+    {
         static void Main(string[] args)
         {
-            //Class was on Saturday 5/26/2018
-            //Person Mary = new Person(); // 1st in class Exercise new instance of the Person class
-            //Person person1 = new Person();// 2nd in class Exercise new instance of the Person class
-            //person1.DistanceTraveled = 5;
-            //Console.WriteLine(person1.DistanceTraveled);
-            //person1.Walk(10);
-            //Console.WriteLine (person1.DistanceTraveled);
+            int[] status = new int[]{3, 4, 1, 4, 2, 3, 4};            
 
-            //Person person2 = new Person();
-            //person2.Walk(10);
-            //Console.WriteLine (person2.DistanceTraveled);
-            //Console.WriteLine (person1.DistanceTraveled);
+            //status = 1 for Alive
+            //status = 2 for Zombie
+            //status = 3 for Dead
+            //status = 4 for Unknown
+            int i = 0;
 
-            //local variables because they are inside of a method.
-            //you create the variable within the method, it stays only within the method
-
-            List <IPerson> people = new List<IPerson>();
-            people.Add(new Human());
-            people.Add(new Zombie());
-            people.Add(new Human());
-
-            foreach (IPerson person in people)
+            while (i < status.Length)
             {
-                 person.Walk(5);
-                 Console.WriteLine(person.DistanceTraveled);                
+                if (status[i] == 1)
+                {
+                    Console.WriteLine("Alive");
+                                    }
+                else if (status[i] == 2)
+                {
+                    Console.WriteLine("Zombie");                    
+                }
+                else if (status[i] == 3)
+                {
+                    Console.WriteLine("Dead");
+                }
+                else if (status[i] == 4)
+                {
+                    Console.WriteLine("Unknown");
+                }
+                
+                i++;
             }
-
-            Zombie Zombie = new Zombie ();
-            Zombie.Walk(100);
-            Console.WriteLine (Zombie.DistanceTraveled);
-
-            Human human = new Human ();
-            human.Run(50);
-            human.Walk(50);
-            Console.WriteLine (human.DistanceTraveled);
-        }        
+            Console.ReadKey();
+        }
     }
 }
-
