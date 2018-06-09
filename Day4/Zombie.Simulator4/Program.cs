@@ -15,7 +15,7 @@ namespace Zombie.Simulator4
             foreach (Status status in statuses)
             {
                 Console.WriteLine (status.FirstName + " " + 
-                status.LastName + "has status" + 
+                status.LastName + " has a status of " + 
                 status.StatusDescription);
             }
         }
