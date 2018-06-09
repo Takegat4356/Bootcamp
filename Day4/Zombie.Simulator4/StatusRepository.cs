@@ -1,4 +1,3 @@
-
 using System.Data;
 using System.Collections.Generic;
 using Dapper;
@@ -15,9 +14,11 @@ public class StatusRepository: Repository
             {
                 dbConnection.Open();
 
-                string sql = "SELECT t1.PersonStatusID, t1.FirstName, t1.LastName" + "FROM persondatabase.person t1" 
-                + "INNER JOIN persondatabase.personstatus t2 ON t1.PersonStatusID = t2.PersonStatusID";
-                return dbConnection.Query<status>(sql,commandType:CommandType.Text).ToList();
+                string sql = "SELECT p.FirstName, p.LastName, ps.StatusDescription" 
+                + "FROM persondatabase.person p" 
+                + "INNER JOIN persondatabase.personstatus ps"
+                + "ON p.PersonStatusID = ps.PersonStatusID";
+                return dbConnection.Query<Status>(sql,commandType:CommandType.Text).ToList();
             }
         }
     }
