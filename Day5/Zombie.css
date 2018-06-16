@@ -10,4 +10,6 @@ thead {
 
 .flex-container{
 display: flex;
+justify-content: right;
 }
+
