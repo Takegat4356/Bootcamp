@@ -9,11 +9,20 @@ namespace ZombieAPI.Controllers
     [Route("api/[controller]")]
     public class ValuesController : Controller
     {
+        public StatusRepository StatusRepository;
+
+        public ValuesController()
+        {
+        StatusRepository = new StatusRepository();
+        }
+
+
         // GET api/values
         [HttpGet]
-        public IEnumerable<string> Get()
+        public IEnumerable<Status> Get()
         {
-            return new string[] { "value1", "value2" };
+            //return new string[] { "value1", "value2" };
+            return StatusRepository.GetAll();
         }
 
         // GET api/values/5
@@ -27,6 +36,8 @@ namespace ZombieAPI.Controllers
         [HttpPost]
         public void Post([FromBody]string value)
         {
+
+
         }
 
         // PUT api/values/5
