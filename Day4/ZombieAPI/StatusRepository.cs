@@ -28,7 +28,9 @@ public void Insert(StatusRepository statusRepository)
 
                 string sql = "INSERT INTO persondatabase.person (person.PersonID, person.FirstName, person.LastName, person.PersonStatusID) values ('12','Ashley','Lee','2');"; //works
 
-                dbConnection.Execute(sql,new {PersonID = statusRepository.person.PersonID, FirstName = statusRepository.FirstName, LastName = statusRepository.LastName, PersonStatusID = statusRepository.PersonStatusID},commandType:CommandType.Text);
+                /*dbConnection.Execute(sql, new {PersonID = statusRepository.PersonID, FirstName = statusRepository.FirstName, LastName = statusRepository.LastName, PersonStatusID = statusRepository.PersonStatusID},commandType:CommandType.Text);*/
+
+                 dbConnection.Execute(sql, new {PersonID = "12", FirstName = "Ashley", LastName = "Lee", PersonStatusID = "2"},commandType:CommandType.Text);
             }
         }
 
