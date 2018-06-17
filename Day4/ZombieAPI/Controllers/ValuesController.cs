@@ -9,11 +9,11 @@ namespace ZombieAPI.Controllers
     [Route("api/[controller]")]
     public class ValuesController : Controller
     {
-        public StatusRepository StatusRepository;
+        public StatusRepository statusRepository;
 
         public ValuesController()
         {
-        StatusRepository = new StatusRepository();
+        statusRepository = new StatusRepository();
         }
 
 
@@ -22,7 +22,7 @@ namespace ZombieAPI.Controllers
         public IEnumerable<Status> Get()
         {
             //return new string[] { "value1", "value2" };
-            return StatusRepository.GetAll();
+            return statusRepository.GetAll();
         }
 
         // GET api/values/5
