@@ -20,15 +20,15 @@ public class StatusRepository: Repository
             }
         }
 
-public void Insert()
+public void Insert(StatusRepository statusRepository)
         {
             using (IDbConnection dbConnection = Connection)
             {
                 dbConnection.Open();
 
-                string sql = "INSERT p.FirstName, p.LastName, ps.StatusDescription FROM persondatabase.person p INNER JOIN persondatabase.personstatus ps ON p.PersonStatusID = ps.PersonStatusID"; //works
+                string sql = "INSERT INTO persondatabase.person (person.PersonID, person.FirstName, person.LastName, person.PersonStatusID) values ('12','Ashley','Lee','2');"; //works
 
-                //return dbConnection;
+                dbConnection.Execute(sql,new {PersonID = statusRepository.PersonID, FirstName = statusRepository.FirstName, LastName = statusRepository.LastName, PersonStatusID = statusRepository.PersonStatusID},commandType:CommandType.Text);
             }
         }
 
