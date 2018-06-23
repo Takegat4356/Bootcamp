@@ -1,36 +1,26 @@
-let statuses = [
-    {status:4,name:'John'},
-    {status:2,name:'Gary'},
-    {status:1,name:'Lisa'},
-    {status:3,name:'Sarah'},
-    {status:2,name:'Bob'},
-    {status:1,name:'LaJuana'}
-];
+let statuses = [4, 3, 1, 2, 4, 1]
+let names = ['John','Gary','Lisa','Sarah','Bob', 'LaJuana']
 
-for(let statuses of statuses){
-    writeString(getPersonStatusDescription(personStatus));
+for (let counter = 0; counter < statuses.length; counter++){
+    let status = getStatus (statuses[counter]);
+    writeStatus(names [counter] + " has a status of " + status);    
 }
 
-function getPersonStatusDescription(personStatus){
-
-    let status = 'Status for' + personStatus.name + 'is';    
-
-    let counter = 0;
-    for (let counter = 0; counter < statuses.length; counter++){
-        let status = "";
-        if (statuses [counter] === 1){
-                status = "Alive";        
-        } else if (statuses [counter] === 2) {
-                status = "Zombie";
-        } else if (statuses [counter] === 3) {
-                status = "Dead";
-        } else {
-                status = "Unknown";
-        }
-        return status;
+//we want to pass our dependencies (statusNumber) into our method
+function getStatus(statusNumber){
+    let status = "";
+    if (statusNumber === 1){
+            status = "Alive";        
+    } else if (statusNumber === 2) {
+            status = "Zombie";
+    } else if (statusNumber === 3) {
+            status = "Dead";
+    } else {
+            status = "Unknown";
     }
+return status;
 }
 
-function writeString(value){
+function writeStatus(value){
     console.log(value);
 }
