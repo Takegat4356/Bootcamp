@@ -6,6 +6,7 @@
 //status: string
 //statusNumber: number
 //value:string
+//:void
 
 let statuses: number[] = [4, 3, 1, 2, 4, 1]
 let names:string[] = ['John','Gary','Lisa','Sarah','Bob', 'LaJuana']
