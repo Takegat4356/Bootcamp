@@ -30,6 +30,6 @@ function getStatus(statusNumber: number){
 return status;
 }
 
-function writeStatus(value:string){
+function writeStatus(value:string):void{
     console.log(value);
 }
