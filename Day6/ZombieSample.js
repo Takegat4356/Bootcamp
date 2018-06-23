@@ -7,13 +7,13 @@ for (let counter = 0; counter < statuses.length; counter++){
     if (statuses [counter] === 1){
         status = "Alive";        
 } else if (statuses [counter] === 2) {
-    console.log = "Zombie";
+        status = "Zombie";
 } else if (statuses [counter] === 3) {
-    console.log = "Dead";
+        status = "Dead";
 } else {
-    console.log = "Unknown";
+        status = "Unknown";
 }
-    console.log(names [counter] + "has a status of" + status);    
+    console.log(names [counter] + " has a status of " + status);    
 }
 
 
