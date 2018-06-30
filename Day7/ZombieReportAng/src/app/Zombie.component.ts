@@ -10,13 +10,13 @@ export class ZombieComponent {
 public title: string= 'Zombie Report';
 public statuses: PersonStatus[] = [];
   
-public constructor(personStatusService: PersonStatusService){
+public constructor(){
 this.statuses =[
-  {firstName: 'Tom', lastName: 'Masters', statusID:4,statusDescription:'Unknown'},
-  {firstName: 'Bob', lastName: 'Masters', statusID:2,statusDescription:'Zombie'},
-  {firstName: 'John', lastName: 'Masters', statusID:1,statusDescription:'Alive'},
-  {firstName: 'Joe', lastName: 'Masters', statusID:3,statusDescription:'Dead'},
-  {firstName: 'Steve', lastName: 'Masters', statusID:2,statusDescription:'Zombie'}
+  {firstName: 'Tom', lastName: 'Masters', statusId:4,statusDescription:'Unknown'},
+  {firstName: 'Bob', lastName: 'Masters', statusId:2,statusDescription:'Zombie'},
+  {firstName: 'John', lastName: 'Masters', statusId:1,statusDescription:'Alive'},
+  {firstName: 'Joe', lastName: 'Masters', statusId:3,statusDescription:'Dead'},
+  {firstName: 'Steve', lastName: 'Masters', statusId:2,statusDescription:'Zombie'}
   ];  
 }
 
