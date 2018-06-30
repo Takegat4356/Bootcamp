@@ -5,6 +5,7 @@ import {RouterModule, Routes} from '@angular/router';
 import { AppComponent } from './app.component';
 import { ZombieComponent } from './Zombie.component';
 import { addStatusComponent } from './addStatus.component';
+import { HttpClient } from 'selenium-webdriver/http';
 
 const appRoutes:Routes = [
 {path: 'addStatus', component:addStatusComponent},
@@ -17,7 +18,10 @@ const appRoutes:Routes = [
     AppComponent, ZombieComponent, addStatusComponent ////add a comma here, then add Zombie Component 
   ],
   imports: [
-    BrowserModule,RouterModule.forRoot(appRoutes)
+    BrowserModule,
+    //HttpClientModule,
+    //FormsModule,  
+    RouterModule.forRoot(appRoutes)
   ],
   providers: [],
   bootstrap: [AppComponent]
