@@ -1,4 +1,4 @@
-namespace ZombieReport.WebAPI
+namespace ZombieAPI
 {
     using System.Collections.Generic;
     using System.Data;
